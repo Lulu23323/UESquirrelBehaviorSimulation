@@ -13,7 +13,7 @@
 		},
 		{
 			"Name": "VertexAnimationManager",
-			"Enabled": true
+			"Enabled": false
 		}
 	]
 }
