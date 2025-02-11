@@ -14,6 +14,15 @@
 		{
 			"Name": "VertexAnimationManager",
 			"Enabled": false
+		},
+		{
+			"Name": "AnimToTexture",
+			"Enabled": true
+		},
+		{
+			"Name": "Flocks",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/206de3770363494f98c9133910dbae8c"
 		}
 	]
 }
