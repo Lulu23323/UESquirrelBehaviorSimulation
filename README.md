@@ -41,7 +41,7 @@
 
 ##### Material Setup
 1. **Bake VAT using the Flock plugin.**
-   ![Image]
+  ![025290ba-ef11-40b4-9411-a0cdec0b65ee](https://github.com/user-attachments/assets/ee7da052-1b0c-41d5-8596-5daf1208ee30)
 2. **Modify the plugin driver:** The original method used `time + fmod` looping instead of frame-based logic. Modified to calculate the current frame's time using `AnimationFrame` and `AnimationFrameRate` for sampling.
    ![Image]
    ![Image]
