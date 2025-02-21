@@ -39,11 +39,6 @@ This is a Niagara GPU Sim squirrel flocking effect that I created.
 - **SquirrelNumber**: Controls the number of squirrels generated.
 - **MovementArea**: Defines the movement range of squirrels. If a particle moves beyond this area, it will gradually move back toward the center.
 
-## Usage
-Adjust the exposed parameters in the Niagara System to fit your needs.
-
-
-
 
 ## Implementation
 
