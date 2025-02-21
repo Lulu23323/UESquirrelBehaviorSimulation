@@ -1,5 +1,8 @@
 # Niagara Squirrel Simulation
 
+📺 Watch the video: [YouTube - Niagara Squirrel Simulation](https://youtu.be/QcGffWN9aSA)
+
+
 ## Requirements
 
 ### Basic Requirements
