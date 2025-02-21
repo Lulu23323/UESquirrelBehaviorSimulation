@@ -43,10 +43,11 @@
 1. **Bake VAT using the Flock plugin.**
    ![1](https://github.com/user-attachments/assets/ee7da052-1b0c-41d5-8596-5daf1208ee30)
 2. **Modify the plugin driver:** The original method used `time + fmod` looping instead of frame-based logic. Modified to calculate the current frame's time using `AnimationFrame` and `AnimationFrameRate` for sampling.
+   - The driving method uses a time + fmod loop instead of a frame-based logic. The Flock plugin is used to generate VAT, and I modified its VAT driving node by replacing the Time node, allowing us to manually set the Frame. This means using AnimationFrame and AnimationFrameRate to calculate the corresponding time for each frame and sample accordingly. However, in practice, the sampling resulted in unsmooth transitions, ghosting, and flickering issues. Even forcing the last frame to be an integer did not resolve the problem. Initially, I suspected that restricting the first frame might be necessary, but in reality, I needed to shift the pointer of the first frame forward, likely due to inaccuracies in VAT sampling.
    ![2](https://github.com/user-attachments/assets/103f6c79-7ff9-4726-956b-ed7121752ce5)
    ![3](https://github.com/user-attachments/assets/8b94de90-3887-438c-802f-43c459ae2b4c)
 
-4. **Material receives Dynamic Parameter from Niagara for frame sampling.**
+3. **Material receives Dynamic Parameter from Niagara for frame sampling.**
   ![4](https://github.com/user-attachments/assets/15f58e88-6856-464c-8863-62d08579b4ec)
   ![5](https://github.com/user-attachments/assets/948e32c2-4890-476f-a6fb-50fc42a4de3e)
 
@@ -101,7 +102,7 @@ Particle parameters are mainly calculated using a **Scratch Script**.
   - [GitHub Link](https://github.com/kromond/AnimToTextureHelpers)
 - ✔ **Flocks Plugin for UE5** (VAT animation driving)
   - [Video Link](https://www.bilibili.com/video/BV1te411G7T5)
-  - The driving method uses a time + fmod loop instead of a frame-based logic. The Flock plugin is used to generate VAT, and I modified its VAT driving node by replacing the Time node, allowing us to manually set the Frame. This means using AnimationFrame and AnimationFrameRate to calculate the corresponding time for each frame and sample accordingly. However, in practice, the sampling resulted in unsmooth transitions, ghosting, and flickering issues. Even forcing the last frame to be an integer did not resolve the problem. Initially, I suspected that restricting the first frame might be necessary, but in reality, I needed to shift the pointer of the first frame forward, likely due to inaccuracies in VAT sampling.
+
 
 ### Additional Resources
 - ⭐ **Unreal Engine 5 Large-Scale Crowd Simulation with Niagara**
