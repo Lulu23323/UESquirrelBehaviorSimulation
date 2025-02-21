@@ -1,4 +1,5 @@
 # Niagara Squirrel Simulation
+This is a Niagara GPU Sim squirrel flocking effect that I created.
 
 ## Watch the Presentation Video
 [![Watch the presentation video](https://github.com/user-attachments/assets/79aeff51-19a1-48e4-be0d-63ce3ec3254b)](https://youtu.be/QcGffWN9aSA)
@@ -27,6 +28,22 @@
 - ❌ Expanded interactions:
   - Players can eliminate squirrels within a certain range.
   - Squirrels drop effects or small objects upon elimination.
+
+## Exposed Parameters
+- **AnimationSpeed**: Adjusts the overall playback speed of the squirrel VAT animation. The playback speed for different movement states will be adjusted based on this value; for example, the running animation will play slightly faster than walking and idle animations.
+- **AvoidanceRadius**: Controls the reaction distance at which squirrels start avoiding the player.
+- **GenerateMidpoint**: Defines the central position where the squirrel flock is generated.
+- **GenerateSpaceSize**: Sets the area in which squirrels are spawned.
+- **PlayerLocation** *(Non-adjustable)*: This parameter records the player’s position in real time, allowing the squirrel particles to avoid it.
+- **SquirrelSize**: Adjusts the overall size of the squirrel particles, with each squirrel’s size being randomized within a certain range.
+- **SquirrelNumber**: Controls the number of squirrels generated.
+- **MovementArea**: Defines the movement range of squirrels. If a particle moves beyond this area, it will gradually move back toward the center.
+
+## Usage
+Adjust the exposed parameters in the Niagara System to fit your needs.
+
+
+
 
 ## Implementation
 
